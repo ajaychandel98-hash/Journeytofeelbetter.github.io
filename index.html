@@ -92,30 +92,31 @@
         }
     </style>
 </head>
-<body class="h-full bg-gradient-to-br from-indigo-950 via-purple-900 via-pink-950 to-rose-950 text-slate-100 overflow-x-hidden flex flex-col justify-between selection:bg-amber-300 selection:text-slate-950 min-h-screen">
+<body class="h-full bg-gradient-to-br from-indigo-950 via-purple-900 via-pink-950 to-rose-950 text-slate-100 overflow-x-hidden flex flex-col justify-between selection:bg-amber-300 selection:text-slate-950">
 
     <div id="stars-container" class="fixed inset-0 pointer-events-none z-0 overflow-hidden"></div>
 
     <header class="relative z-20 w-full max-w-md mx-auto px-4 pt-4 flex items-center justify-between">
         <div class="flex items-center space-x-2">
-            <button id="sound-btn" onclick="app.toggleSound()" class="px-3 py-1.5 rounded-full bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-300/30 backdrop-blur-md text-xs font-semibold text-cyan-200 transition-all flex items-center space-x-1.5 shadow-lg cursor-pointer">
+            <button id="sound-btn" onclick="app.toggleSound()" class="px-3 py-1.5 rounded-full bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-300/30 backdrop-blur-md text-xs font-semibold text-cyan-100 transition-all">
                 <span id="sound-icon">🪕</span>
                 <span id="sound-label">Shiv Bhajan</span>
             </button>
         </div>
         <div class="flex items-center space-x-2">
-            <button onclick="app.openStudio()" class="px-3 py-1.5 rounded-full bg-violet-600/80 hover:bg-violet-500 border border-violet-300/40 text-xs font-semibold text-white transition-all flex items-center space-x-1 shadow-lg cursor-pointer">
-                <span>📸 Add Photos</span>
+            <button onclick="app.openStudio()" class="px-3 py-1.5 rounded-full bg-violet-600/80 hover:bg-violet-500 border border-violet-300/40 text-xs font-semibold text-white transition-all flex items-center gap-1.5">
+                <span>📸</span>
+                <span>Add Photos</span>
             </button>
-            <button id="share-btn" onclick="app.shareWhatsApp()" class="px-3 py-1.5 rounded-full bg-emerald-500/90 hover:bg-emerald-400 border border-emerald-300/40 text-xs font-semibold text-white transition-all flex items-center space-x-1 shadow-lg cursor-pointer">
-                <span>💬 Send</span>
+            <button id="share-btn" onclick="app.shareWhatsApp()" class="px-3 py-1.5 rounded-full bg-emerald-500/90 hover:bg-emerald-400 border border-emerald-300/40 text-xs font-semibold text-white transition-all flex items-center gap-1.5">
+                <span>💬</span>
+                <span>Send</span>
             </button>
         </div>
     </header>
 
     <main class="relative z-10 w-full max-w-md mx-auto px-4 py-4 flex-1 flex flex-col justify-center">
 
-        <!-- VIEW 1: WELCOME INTRO -->
         <section id="view-intro" class="page-transition space-y-6 text-center bg-white/15 backdrop-blur-2xl p-8 rounded-3xl border border-white/30 shadow-[0_15px_40px_rgba(0,0,0,0.4)]">
             <div class="w-16 h-16 mx-auto bg-amber-400/30 text-amber-300 rounded-full flex items-center justify-center text-3xl floating border border-amber-300/50 shadow-[0_0_20px_rgba(251,191,36,0.4)]">
                 ✨
@@ -127,7 +128,7 @@
                 </p>
             </div>
             <div class="pt-2">
-                <button onclick="app.showFlower()" class="btn-interactive-primary w-full py-4 px-6 bg-gradient-to-r from-amber-300 via-rose-400 to-pink-500 text-slate-950 font-extrabold text-base rounded-2xl shadow-xl flex items-center justify-center space-x-2 cursor-pointer">
+                <button onclick="app.showFlower()" class="btn-interactive-primary w-full py-4 px-6 bg-gradient-to-r from-amber-300 via-rose-400 to-pink-500 text-slate-950 font-extrabold text-base rounded-2xl shadow-[0_12px_30px_rgba(244,63,94,0.4)] transition-all">
                     <span>Yes, I could use some comfort 🌸</span>
                 </button>
             </div>
@@ -136,7 +137,6 @@
 
         <section id="view-flower" class="hidden page-transition space-y-6 text-center bg-white/15 backdrop-blur-2xl p-8 rounded-3xl border border-white/30 shadow-[0_15px_40px_rgba(0,0,0,0.4)]">
             <div class="relative w-52 h-52 mx-auto flex items-center justify-center">
-                <!-- Realistic Rose SVG Illustration -->
                 <svg class="w-48 h-48 flower-animate drop-shadow-[0_10px_30px_rgba(244,63,94,0.7)]" viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <linearGradient id="stemGrad" x1="100" y1="110" x2="110" y2="200" gradientUnits="userSpaceOnUse">
@@ -186,7 +186,7 @@
                 </p>
             </div>
             <div class="pt-2">
-                <button onclick="app.showHub()" class="btn-interactive-primary w-full py-4 px-6 bg-gradient-to-r from-pink-500 via-rose-400 to-amber-300 text-slate-950 font-extrabold text-sm rounded-2xl shadow-xl flex items-center justify-center space-x-2 cursor-pointer">
+                <button onclick="app.showHub()" class="btn-interactive-primary w-full py-4 px-6 bg-gradient-to-r from-pink-500 via-rose-400 to-amber-300 text-slate-950 font-extrabold text-sm rounded-2xl shadow-[0_12px_30px_rgba(244,63,94,0.4)] transition-all">
                     <span>Enter Your Cozy Hub ➔</span>
                 </button>
             </div>
@@ -200,8 +200,7 @@
             </div>
 
             <div class="space-y-3">
-                <!-- Sunset Card -->
-                <button onclick="app.openGallery('sunsets')" class="w-full text-left p-4 bg-gradient-to-r from-amber-500/30 to-orange-500/20 hover:from-amber-500/40 hover:to-orange-500/30 backdrop-blur-xl rounded-2xl border border-amber-400/30 shadow-lg flex items-center space-x-4 transition-all group transform active:scale-[0.99] cursor-pointer">
+                <button onclick="app.openGallery('sunsets')" class="w-full text-left p-4 bg-gradient-to-r from-amber-500/30 to-orange-500/20 hover:from-amber-500/40 hover:to-orange-500/30 backdrop-blur-xl rounded-2xl border border-white/15 transition-all flex items-center gap-3 group">
                     <div class="p-3 bg-gradient-to-br from-amber-400 to-orange-500 text-slate-950 rounded-xl transition-transform group-hover:scale-110 shadow-md text-2xl">
                         🌅
                     </div>
@@ -212,8 +211,7 @@
                     <span class="text-amber-300 font-bold group-hover:translate-x-1 transition-transform">➔</span>
                 </button>
 
-                <!-- 2ND PLACE: Shiva Blessings Card -->
-                <button onclick="app.showShivaBlessings()" class="w-full text-left p-4 bg-gradient-to-r from-cyan-500/30 via-blue-500/20 to-indigo-500/30 hover:from-cyan-500/40 hover:to-indigo-500/40 backdrop-blur-xl rounded-2xl border border-cyan-300/40 shadow-lg flex items-center space-x-4 transition-all group transform active:scale-[0.99] cursor-pointer">
+                <button onclick="app.showShivaBlessings()" class="w-full text-left p-4 bg-gradient-to-r from-cyan-500/30 via-blue-500/20 to-indigo-500/30 hover:from-cyan-500/40 hover:to-indigo-500/40 backdrop-blur-xl rounded-2xl border border-white/15 transition-all flex items-center gap-3 group">
                     <div class="p-3 bg-gradient-to-br from-cyan-300 via-blue-400 to-indigo-500 text-slate-950 rounded-xl transition-transform group-hover:scale-110 shadow-md text-2xl">
                         🔱
                     </div>
@@ -224,8 +222,7 @@
                     <span class="text-cyan-300 font-bold group-hover:translate-x-1 transition-transform">➔</span>
                 </button>
 
-                <!-- Stars Card -->
-                <button onclick="app.openGallery('stars')" class="w-full text-left p-4 bg-gradient-to-r from-indigo-500/30 to-purple-500/20 hover:from-indigo-500/40 hover:to-purple-500/30 backdrop-blur-xl rounded-2xl border border-indigo-400/30 shadow-lg flex items-center space-x-4 transition-all group transform active:scale-[0.99] cursor-pointer">
+                <button onclick="app.openGallery('stars')" class="w-full text-left p-4 bg-gradient-to-r from-indigo-500/30 to-purple-500/20 hover:from-indigo-500/40 hover:to-purple-500/30 backdrop-blur-xl rounded-2xl border border-white/15 transition-all flex items-center gap-3 group">
                     <div class="p-3 bg-gradient-to-br from-indigo-400 to-violet-500 text-slate-950 rounded-xl transition-transform group-hover:scale-110 shadow-md text-2xl">
                         ✨
                     </div>
@@ -236,8 +233,7 @@
                     <span class="text-indigo-300 font-bold group-hover:translate-x-1 transition-transform">➔</span>
                 </button>
 
-                <!-- Moon Card -->
-                <button onclick="app.openGallery('moon')" class="w-full text-left p-4 bg-gradient-to-r from-purple-500/30 to-fuchsia-500/20 hover:from-purple-500/40 hover:to-fuchsia-500/30 backdrop-blur-xl rounded-2xl border border-purple-400/30 shadow-lg flex items-center space-x-4 transition-all group transform active:scale-[0.99] cursor-pointer">
+                <button onclick="app.openGallery('moon')" class="w-full text-left p-4 bg-gradient-to-r from-purple-500/30 to-fuchsia-500/20 hover:from-purple-500/40 hover:to-fuchsia-500/30 backdrop-blur-xl rounded-2xl border border-white/15 transition-all flex items-center gap-3 group">
                     <div class="p-3 bg-gradient-to-br from-purple-400 to-fuchsia-500 text-slate-950 rounded-xl transition-transform group-hover:scale-110 shadow-md text-2xl">
                         🌙
                     </div>
@@ -248,8 +244,7 @@
                     <span class="text-purple-300 font-bold group-hover:translate-x-1 transition-transform">➔</span>
                 </button>
 
-                <!-- Self Love Card -->
-                <button onclick="app.showSelfLove()" class="w-full text-left p-4 bg-gradient-to-r from-pink-500/30 to-rose-500/20 hover:from-pink-500/40 hover:to-rose-500/30 backdrop-blur-xl rounded-2xl border border-pink-400/30 shadow-lg flex items-center space-x-4 transition-all group transform active:scale-[0.99] cursor-pointer">
+                <button onclick="app.showSelfLove()" class="w-full text-left p-4 bg-gradient-to-r from-pink-500/30 to-rose-500/20 hover:from-pink-500/40 hover:to-rose-500/30 backdrop-blur-xl rounded-2xl border border-white/15 transition-all flex items-center gap-3 group">
                     <div class="p-3 bg-gradient-to-br from-pink-400 to-rose-500 text-slate-950 rounded-xl transition-transform group-hover:scale-110 shadow-md text-2xl">
                         💖
                     </div>
@@ -260,8 +255,7 @@
                     <span class="text-pink-300 font-bold group-hover:translate-x-1 transition-transform">➔</span>
                 </button>
 
-                <!-- Hobbies Card -->
-                <button onclick="app.showHobbies()" class="w-full text-left p-4 bg-gradient-to-r from-emerald-500/30 to-teal-500/20 hover:from-emerald-500/40 hover:to-teal-500/30 backdrop-blur-xl rounded-2xl border border-emerald-400/30 shadow-lg flex items-center space-x-4 transition-all group transform active:scale-[0.99] cursor-pointer">
+                <button onclick="app.showHobbies()" class="w-full text-left p-4 bg-gradient-to-r from-emerald-500/30 to-teal-500/20 hover:from-emerald-500/40 hover:to-teal-500/30 backdrop-blur-xl rounded-2xl border border-white/15 transition-all flex items-center gap-3 group">
                     <div class="p-3 bg-gradient-to-br from-emerald-400 to-teal-500 text-slate-950 rounded-xl transition-transform group-hover:scale-110 shadow-md text-2xl">
                         ☕
                     </div>
@@ -272,8 +266,7 @@
                     <span class="text-emerald-300 font-bold group-hover:translate-x-1 transition-transform">➔</span>
                 </button>
 
-                <!-- Wordle Game Card -->
-                <button onclick="app.showWordle()" class="w-full text-left p-4 bg-gradient-to-r from-teal-500/30 to-cyan-500/20 hover:from-teal-500/40 hover:to-cyan-500/30 backdrop-blur-xl rounded-2xl border border-teal-400/30 shadow-lg flex items-center space-x-4 transition-all group transform active:scale-[0.99] cursor-pointer">
+                <button onclick="app.showWordle()" class="w-full text-left p-4 bg-gradient-to-r from-teal-500/30 to-cyan-500/20 hover:from-teal-500/40 hover:to-cyan-500/30 backdrop-blur-xl rounded-2xl border border-white/15 transition-all flex items-center gap-3 group">
                     <div class="p-3 bg-gradient-to-br from-teal-300 to-cyan-400 text-slate-950 rounded-xl transition-transform group-hover:scale-110 shadow-md text-2xl">
                         🧩
                     </div>
@@ -289,7 +282,8 @@
         <section id="view-gallery" class="hidden page-transition space-y-4">
             <div class="flex items-center justify-between bg-white/15 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-white/20 shadow-md">
                 <button onclick="app.showHub()" class="text-xs font-bold text-amber-200 hover:text-white flex items-center space-x-1 bg-white/15 px-3 py-1.5 rounded-xl border border-white/20 cursor-pointer">
-                    <span>⬅️ Menu</span>
+                    <span>⬅️</span>
+                    <span>Menu</span>
                 </button>
                 <span id="gallery-title" class="text-xs font-bold text-amber-300 uppercase tracking-wider drop-shadow">Gallery</span>
                 <span id="gallery-counter" class="text-xs font-bold text-white bg-white/15 px-2.5 py-1.5 rounded-xl border border-white/20">0 / 0</span>
@@ -306,21 +300,21 @@
                     </p>
 
                     <div class="flex items-center justify-between gap-2 pt-1">
-                        <button onclick="app.prevPhoto()" class="px-4 py-2.5 bg-white/15 hover:bg-white/25 active:scale-95 text-white text-xs font-bold rounded-xl border border-white/20 transition-all flex items-center space-x-1 cursor-pointer shadow-md">
+                        <button onclick="app.prevPhoto()" class="px-4 py-2.5 bg-white/15 hover:bg-white/25 active:scale-95 text-white text-xs font-bold rounded-xl border border-white/20 transition-all">
                             <span>⬅️ Prev</span>
                         </button>
 
-                        <button onclick="app.deleteCurrentPhoto()" class="px-3 py-2.5 bg-rose-500/30 hover:bg-rose-500/50 active:scale-95 text-rose-200 text-xs font-bold rounded-xl border border-rose-400/40 transition-all flex items-center space-x-1 cursor-pointer shadow-md" title="Delete this photo">
+                        <button onclick="app.deleteCurrentPhoto()" class="px-3 py-2.5 bg-rose-500/30 hover:bg-rose-500/50 active:scale-95 text-rose-200 text-xs font-bold rounded-xl border border-rose-300/30 transition-all">
                             <span>🗑️ Delete</span>
                         </button>
 
-                        <button onclick="app.nextPhoto()" class="btn-interactive-primary px-5 py-2.5 bg-gradient-to-r from-amber-300 to-rose-400 text-slate-950 font-extrabold text-xs rounded-xl shadow-lg flex items-center space-x-1 cursor-pointer">
+                        <button onclick="app.nextPhoto()" class="btn-interactive-primary px-5 py-2.5 bg-gradient-to-r from-amber-300 to-rose-400 text-slate-950 font-extrabold text-xs rounded-xl shadow-[0_10px_25px_rgba(251,146,60,0.35)]">
                             <span>Next ➔</span>
                         </button>
                     </div>
 
                     <div class="pt-1">
-                        <button onclick="app.discoverNewPhoto()" class="w-full py-2.5 bg-gradient-to-r from-violet-600/80 to-purple-600/80 hover:from-violet-500 hover:to-purple-500 active:scale-95 border border-purple-300/40 text-white font-bold text-xs rounded-xl transition-all flex items-center justify-center space-x-1.5 cursor-pointer shadow-lg">
+                        <button onclick="app.discoverNewPhoto()" class="w-full py-2.5 bg-gradient-to-r from-violet-600/80 to-purple-600/80 hover:from-violet-500 hover:to-purple-500 active:scale-95 border border-violet-300/40 rounded-xl text-white font-extrabold text-xs shadow-xl transition-all">
                             <span>✨ Discover Another Stunning View</span>
                         </button>
                     </div>
@@ -331,7 +325,8 @@
         <section id="view-studio" class="hidden page-transition space-y-4">
             <div class="flex items-center justify-between bg-white/15 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-white/20 shadow-md">
                 <button onclick="app.showHub()" class="text-xs font-bold text-amber-200 hover:text-white flex items-center space-x-1 bg-white/15 px-3 py-1.5 rounded-xl border border-white/20 cursor-pointer">
-                    <span>⬅️ Menu</span>
+                    <span>⬅️</span>
+                    <span>Menu</span>
                 </button>
                 <span class="text-xs font-bold text-violet-200 uppercase tracking-wider drop-shadow">Photo Studio 📸</span>
                 <span class="w-12"></span>
@@ -354,26 +349,26 @@
 
                 <div class="space-y-1.5">
                     <label class="text-xs font-bold text-amber-200">2. Upload Photos from Device:</label>
-                    <input type="file" id="studio-file-input" multiple accept="image/*" class="w-full text-xs text-slate-200 file:mr-3 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-extrabold file:bg-amber-400 file:text-slate-950 hover:file:bg-amber-300 cursor-pointer bg-slate-900/50 rounded-xl p-2 border border-white/20">
+                    <input type="file" id="studio-file-input" multiple accept="image/*" class="w-full text-xs text-slate-200 file:mr-3 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-amber-300 file:text-slate-900">
                 </div>
 
                 <div class="space-y-1.5">
                     <label class="text-xs font-bold text-amber-200">Or Paste Image URLs (one per line):</label>
-                    <textarea id="studio-url-input" rows="2" placeholder="https://imgur.com/example.jpg" class="w-full bg-slate-900/90 border border-amber-300/30 rounded-xl p-2.5 text-xs text-slate-100 placeholder:text-slate-400 focus:outline-none focus:border-amber-400 resize-none"></textarea>
+                    <textarea id="studio-url-input" rows="2" placeholder="https://imgur.com/example.jpg" class="w-full bg-slate-900/90 border border-amber-300/30 rounded-xl p-2.5 text-xs text-slate-100 focus:outline-none focus:border-amber-400"></textarea>
                 </div>
 
                 <div class="space-y-1.5">
                     <label class="text-xs font-bold text-amber-200">Custom Memory Caption (Optional):</label>
-                    <input type="text" id="studio-caption-input" placeholder="e.g. Remember when we watched the sunset here?" class="w-full bg-slate-900/90 border border-amber-300/30 rounded-xl px-3 py-2.5 text-xs text-slate-100 placeholder:text-slate-400 focus:outline-none focus:border-amber-400">
+                    <input type="text" id="studio-caption-input" placeholder="e.g. Remember when we watched the sunset here?" class="w-full bg-slate-900/90 border border-amber-300/30 rounded-xl px-3 py-2.5 text-xs text-slate-100 focus:outline-none focus:border-amber-400">
                 </div>
 
-                <button onclick="app.addPhotosFromStudio()" class="w-full py-3 bg-gradient-to-r from-amber-400 via-rose-400 to-pink-500 text-slate-950 font-extrabold text-xs rounded-xl shadow-xl active:scale-95 transition-all cursor-pointer">
+                <button onclick="app.addPhotosFromStudio()" class="w-full py-3 bg-gradient-to-r from-amber-400 via-rose-400 to-pink-500 text-slate-950 font-extrabold text-xs rounded-xl shadow-xl active:scale-95 transition-all">
                     ✨ Add Photos to Gallery
                 </button>
 
                 <div class="pt-3 border-t border-white/20 space-y-2">
                     <p class="text-[11px] text-amber-300 text-center font-bold">Want these photos to load on her phone too?</p>
-                    <button onclick="app.generateShareableLink()" class="w-full py-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs rounded-xl shadow-xl active:scale-95 transition-all flex items-center justify-center space-x-1.5 cursor-pointer">
+                    <button onclick="app.generateShareableLink()" class="w-full py-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs rounded-xl shadow-xl active:scale-95 transition-all">
                         <span>🔗 Copy Shareable Link with Photos</span>
                     </button>
                     <p id="export-status" class="text-[10px] text-amber-200 text-center min-h-[16px] font-semibold"></p>
@@ -384,13 +379,14 @@
         <section id="view-self-love" class="hidden page-transition space-y-4">
             <div class="flex items-center justify-between bg-white/15 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-white/20 shadow-md">
                 <button onclick="app.showHub()" class="text-xs font-bold text-amber-200 hover:text-white flex items-center space-x-1 bg-white/15 px-3 py-1.5 rounded-xl border border-white/20 cursor-pointer">
-                    <span>⬅️ Menu</span>
+                    <span>⬅️</span>
+                    <span>Menu</span>
                 </button>
                 <span class="text-xs font-bold text-pink-300 uppercase tracking-wider drop-shadow">Self-Love Notes 💖</span>
                 <span class="w-12"></span>
             </div>
 
-            <div class="bg-gradient-to-br from-pink-900/60 via-rose-900/50 to-purple-900/60 backdrop-blur-2xl p-8 rounded-3xl border border-pink-400/40 shadow-[0_15px_40px_rgba(0,0,0,0.4)] text-center space-y-6 relative overflow-hidden">
+            <div class="bg-gradient-to-br from-pink-900/60 via-rose-900/50 to-purple-900/60 backdrop-blur-2xl p-8 rounded-3xl border border-pink-400/40 shadow-[0_15px_40px_rgba(0,0,0,0.4)] text-center">
                 <div class="inline-flex p-3.5 bg-pink-500/30 text-pink-200 rounded-full mb-1 shadow-[0_0_20px_rgba(244,63,94,0.4)]">
                     💖
                 </div>
@@ -399,7 +395,7 @@
                         Loading warm note...
                     </p>
                 </div>
-                <button onclick="app.nextQuote()" class="w-full py-3.5 px-6 bg-gradient-to-r from-pink-500 via-rose-400 to-amber-300 text-slate-950 font-extrabold text-xs rounded-2xl shadow-xl hover:shadow-pink-500/40 active:scale-95 transition-all flex items-center justify-center space-x-2 cursor-pointer">
+                <button onclick="app.nextQuote()" class="w-full py-3.5 px-6 bg-gradient-to-r from-pink-500 via-rose-400 to-amber-300 text-slate-950 font-extrabold text-xs rounded-2xl shadow-xl hover:scale-[1.01] transition-all">
                     <span>Give Me Another Note ✨</span>
                 </button>
             </div>
@@ -408,7 +404,8 @@
         <section id="view-hobbies" class="hidden page-transition space-y-4">
             <div class="flex items-center justify-between bg-white/15 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-white/20 shadow-md">
                 <button onclick="app.showHub()" class="text-xs font-bold text-amber-200 hover:text-white flex items-center space-x-1 bg-white/15 px-3 py-1.5 rounded-xl border border-white/20 cursor-pointer">
-                    <span>⬅️ Menu</span>
+                    <span>⬅️</span>
+                    <span>Menu</span>
                 </button>
                 <span class="text-xs font-bold text-emerald-300 uppercase tracking-wider drop-shadow">Things to do when unhappy ☕</span>
                 <span class="w-12"></span>
@@ -428,13 +425,14 @@
         <section id="view-shiva" class="hidden page-transition space-y-4">
             <div class="flex items-center justify-between bg-white/15 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-white/20 shadow-md">
                 <button onclick="app.showHub()" class="text-xs font-bold text-amber-200 hover:text-white flex items-center space-x-1 bg-white/15 px-3 py-1.5 rounded-xl border border-white/20 cursor-pointer">
-                    <span>⬅️ Menu</span>
+                    <span>⬅️</span>
+                    <span>Menu</span>
                 </button>
                 <span class="text-xs font-bold text-cyan-200 uppercase tracking-wider drop-shadow">May Shiva Bless Your Day 🔱</span>
                 <span id="shiva-counter" class="text-xs font-bold text-white bg-white/15 px-2.5 py-1.5 rounded-xl border border-white/20">1 / 5</span>
             </div>
 
-            <div class="bg-gradient-to-br from-slate-900/90 via-blue-950/80 to-indigo-950/90 backdrop-blur-2xl p-6 rounded-3xl border border-cyan-300/30 shadow-[0_15px_40px_rgba(0,0,0,0.4)] text-center space-y-5">
+            <div class="bg-gradient-to-br from-slate-900/90 via-blue-950/80 to-indigo-950/90 backdrop-blur-2xl p-6 rounded-3xl border border-cyan-300/30 shadow-[0_15px_40px_rgba(0,0,0,0.4)] text-center">
                 <div class="inline-flex p-3 bg-cyan-500/20 text-cyan-200 rounded-full border border-cyan-300/40 shadow-[0_0_20px_rgba(34,211,238,0.3)]">
                     🔱
                 </div>
@@ -455,11 +453,11 @@
                 </div>
 
                 <div class="flex items-center justify-between gap-2 pt-1">
-                    <button onclick="app.prevShivaBlessing()" class="px-4 py-2.5 bg-white/15 hover:bg-white/25 active:scale-95 text-white text-xs font-bold rounded-xl border border-white/20 transition-all flex items-center space-x-1 cursor-pointer shadow-md">
+                    <button onclick="app.prevShivaBlessing()" class="px-4 py-2.5 bg-white/15 hover:bg-white/25 active:scale-95 text-white text-xs font-bold rounded-xl border border-white/20 transition-all">
                         <span>⬅️ Prev Photo</span>
                     </button>
 
-                    <button onclick="app.nextShivaBlessing()" class="btn-interactive-primary px-5 py-2.5 bg-gradient-to-r from-cyan-300 to-blue-400 text-slate-950 font-extrabold text-xs rounded-xl shadow-lg flex items-center space-x-1 cursor-pointer">
+                    <button onclick="app.nextShivaBlessing()" class="btn-interactive-primary px-5 py-2.5 bg-gradient-to-r from-cyan-300 to-blue-400 text-slate-950 font-extrabold text-xs rounded-xl shadow-[0_10px_25px_rgba(34,211,238,0.25)]">
                         <span>Next Photo ➔</span>
                     </button>
                 </div>
@@ -469,7 +467,8 @@
         <section id="view-wordle" class="hidden page-transition space-y-3">
             <div class="flex items-center justify-between bg-white/15 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-white/20 shadow-md">
                 <button onclick="app.showHub()" class="text-xs font-bold text-amber-200 hover:text-white flex items-center space-x-1 bg-white/15 px-3 py-1.5 rounded-xl border border-white/20 cursor-pointer">
-                    <span>⬅️ Menu</span>
+                    <span>⬅️</span>
+                    <span>Menu</span>
                 </button>
                 <span class="text-xs font-bold text-teal-300 uppercase tracking-wider drop-shadow">Wordle of Care 🧩</span>
                 <button onclick="app.initWordle()" class="text-xs font-bold text-teal-200 hover:text-white bg-teal-500/30 px-3 py-1.5 rounded-xl border border-teal-300/30 cursor-pointer">New ↺</button>
@@ -496,31 +495,22 @@
                 { url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80", caption: "A calm evening sea reflecting warm, gentle light." },
                 { url: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=1000&q=80", caption: "Peaceful mountain sunrise embracing the valley with hope." },
                 { url: "https://images.pexels.com/photos/25527078/pexels-photo-25527078.jpeg?auto=format&fit=crop&w=1000&q=80", caption: "Peace" },
-                 { url: "https://images.pexels.com/photos/17725058/pexels-photo-17725058.jpeg?auto=format&fit=crop&w=1000&q=80", caption: "Peace" },
+                { url: "https://images.pexels.com/photos/17725058/pexels-photo-17725058.jpeg?auto=format&fit=crop&w=1000&q=80", caption: "Peace" },
                 { url: "https://images.pexels.com/photos/39621554/pexels-photo-39621554.jpeg?auto=format&fit=crop&w=1000&q=80", caption: "Peace" },
-                 { url: "https://images.pexels.com/photos/39281443/pexels-photo-39281443.jpeg?auto=format&fit=crop&w=1000&q=80", caption: "Peace" },
-                 { url: "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/146F9/production/_128650738_screenshot-11.png.webp?auto=format&fit=crop&w=1000&q=80", caption: "Peace" },
-    
-
-
+                { url: "https://images.pexels.com/photos/39281443/pexels-photo-39281443.jpeg?auto=format&fit=crop&w=1000&q=80", caption: "Peace" },
+                { url: "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/146F9/production/_128650738_screenshot-11.png.webp?auto=format&fit=crop&w=1000&q=80", caption: "Peace" }
             ],
             stars: [
                 { url: "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1000&q=80", caption: "Stargazing through quiet pine trees on a crisp night." },
                 { url: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1000&q=80", caption: "A cozy tent glowing under the vast, peaceful milky way." },
-                { url: "https://www.google.com/imgres?q=stargazing%20leh&imgurl=https%3A%2F%2Flookaside.instagram.com%2Fseo%2Fgoogle_widget%2Fcrawler%2F%3Fmedia_id%3D3496154989427628029&imgrefurl=https%3A%2F%2Fwww.instagram.com%2Freel%2FDCE1nCAixf9%2F&docid=rxwVjJ23Ego0LM&tbnid=muoqcggvZ8HedM&vet=12ahUKEwja8-jW7LGXAxUS2TgGHXI6MgMQnPAOegQISRAA..i&w=1214&h=2160&hcb=2&ved=2ahUKEwja8-jW7LGXAxUS2TgGHXI6MgMQnPAOegQISRAAauto=format&fit=crop&w=1000&q=80", caption: "A cozy tent glowing under the vast, peaceful milky way." },
-                { url: "https://www.google.com/imgres?q=stargazing%20leh&imgurl=https%3A%2F%2Fwww.lchangnang.com%2Fblog%2Fwp-content%2Fuploads%2F2024%2F06%2F123.jpeg&imgrefurl=https%3A%2F%2Fwww.lchangnang.com%2Fblog%2Fladakh-is-ideal-for-stargazing%2F&docid=y375IPZXw5kGkM&tbnid=cU81G842FmGdAM&vet=12ahUKEwja8-jW7LGXAxUS2TgGHXI6MgMQnPAOegQISxAA..i&w=1200&h=1203&hcb=2&ved=2ahUKEwja8-jW7LGXAxUS2TgGHXI6MgMQnPAOegQISxAAauto=format&fit=crop&w=1000&q=80", caption: "A cozy tent glowing under the vast, peaceful milky way." },
-                { url: "https://www.instagram.com/p/B8MNIQVpzkX/?utm_source=ig_web_copy_link&vrfl=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==?auto=format&fit=crop&w=1000&q=80", caption: "A cozy tent glowing under the vast, peaceful milky way." },
-                { url: "https://www.instagram.com/reel/Dcgh5VfydCb/?utm_source=ig_web_copy_link&obrf=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==?auto=format&fit=crop&w=1000&q=80", caption: "A cozy tent glowing under the vast, peaceful milky way." },
-
-
-
-                
-,
-                
+                { url: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=80", caption: "A still night under a glowing sky full of wonder." },
+                { url: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=1000&q=80", caption: "Slow skies and quiet stars for a gentler mind." },
+                { url: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80", caption: "A peaceful evening beneath a sky stitched with light." }
             ],
             moon: [
                 { url: "https://images.unsplash.com/photo-1532693322450-2cb5c511067d?auto=format&fit=crop&w=1000&q=80", caption: "The full moon glowing softly over quiet ocean tides." },
-                { url: "https://images.unsplash.com/photo-1509773896068-7fd415d91e2e?auto=format&fit=crop&w=1000&q=80", caption: "Moonlight illuminating dreamy clouds in a velvet sky." }
+                { url: "https://images.unsplash.com/photo-1509773896068-7fd415d91e2e?auto=format&fit=crop&w=1000&q=80", caption: "Moonlight illuminating dreamy clouds in a velvet sky." },
+                { url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1000&q=80", caption: "Moonlit calm drifting across the dark horizon." }
             ]
         };
 
@@ -740,8 +730,8 @@
             showHobbies() {
                 const listEl = document.getElementById('hobbies-list');
                 listEl.innerHTML = COMFORT_ACTIVITIES.map((act, idx) => `
-                    <div onclick="app.toggleHobby(${idx})" class="p-3 rounded-2xl border transition-all cursor-pointer flex items-center space-x-3 ${this.hobbiesState[idx] ? 'bg-amber-400/20 border-amber-300/40 text-amber-100' : 'bg-white/5 border-white/10 text-slate-300 hover:bg-white/10'}">
-                        <div class="w-5 h-5 rounded-lg border flex items-center justify-center text-xs font-bold ${this.hobbiesState[idx] ? 'bg-amber-400 border-amber-400 text-slate-950' : 'border-slate-400'}">
+                    <div onclick="app.toggleHobby(${idx})" class="p-3 rounded-2xl border transition-all cursor-pointer flex items-center space-x-3 ${this.hobbiesState[idx] ? 'bg-amber-400/20 border-amber-400/40' : 'bg-slate-900/30 border-white/10'}">
+                        <div class="w-5 h-5 rounded-lg border flex items-center justify-center text-xs font-bold ${this.hobbiesState[idx] ? 'bg-amber-400 border-amber-400 text-slate-950' : 'border-slate-400/50 text-transparent'}">
                             ${this.hobbiesState[idx] ? '✓' : ''}
                         </div>
                         <span class="text-xs sm:text-sm font-medium ${this.hobbiesState[idx] ? 'line-through opacity-70' : ''}">${act}</span>
@@ -835,7 +825,7 @@
                     <div class="flex justify-center gap-1">
                         ${row.map(key => {
                             let keyLabel = key === 'BACK' ? '⌫' : (key === 'ENTER' ? 'Enter' : key);
-                            return `<button onclick="app.handleKey('${key}')" class="h-9 px-2 sm:px-2.5 rounded-lg font-bold text-xs transition-colors flex items-center justify-center shadow bg-white/10 hover:bg-white/20 text-slate-200 cursor-pointer">${keyLabel}</button>`;
+                            return `<button onclick="app.handleKey('${key}')" class="h-9 px-2 sm:px-2.5 rounded-lg font-bold text-xs transition-colors flex items-center justify-center shadow bg-white/10 text-white hover:bg-white/20 border border-white/10">${keyLabel}</button>`;
                         }).join('')}
                     </div>
                 `).join('');
